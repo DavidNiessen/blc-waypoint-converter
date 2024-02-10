@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
   button.addEventListener("click", async () => {
     const clipboardObject = await getClipboardContent();
     if (clipboardObject.error) {
-      displayError("Failed to access your clipboard.");
+      displayError("Failed to access your clipboard. (1)");
       return;
     }
 
@@ -33,14 +33,16 @@ window.addEventListener("load", () => {
 
     const fromConverterResult = converter.convert(clipboardContent);
     if (fromConverterResult.error || !fromConverterResult.content) {
-      displayError("An error occurred.");
+      displayError("An error occurred. (1)");
+      return;
     }
 
     const waypointList = fromConverterResult.content;
 
     const toConverterResult = BLCConverter.convert(waypointList);
     if (toConverterResult.error || !toConverterResult.content) {
-      displayError("An error occurred.");
+      displayError("An error occurred. (2)");
+      return;
     }
 
     const convertedList = toConverterResult.content;
@@ -49,7 +51,7 @@ window.addEventListener("load", () => {
     if (copied) {
       displaySuccess("Converted waypoints copied to clipboard.");
     } else {
-      displayError("Failed to access your clipboard.");
+      displayError("Failed to access your clipboard. (2)");
     }
   });
 });
