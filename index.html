@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta property="og:title" content="React course projects" />
+
+    <title>Waypoint converter</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/button.css" />
+    <link rel="stylesheet" href="styles/notification.css" />
+
+    <script defer type="module" src="scripts/main.js"></script>
+  </head>
+  <body>
+    <main class="main">
+      <div class="background-wrapper">
+        <div class="background"></div>
+      </div>
+
+      <div class="content">
+        <div class="info-box">
+          <div>
+            <h3 class="info-box__sub">How to use this converter</h3>
+            <ol>
+              <li>
+                <p class="info-box__paragraph">
+                  1: Copy a list of waypoints from another client/mod into your
+                  clipboard.
+                </p>
+              </li>
+              <li>
+                <p class="info-box__paragraph">
+                  2: Press the button and allow the website to access your
+                  clipboard.
+                </p>
+              </li>
+              <li>
+                <p class="info-box__paragraph">
+                  3: The converted waypoint list was copied to your clipboard.
+                  You can now import it in Badlion.
+                </p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3 class="info-box__sub">Currently supported formats</h3>
+            <ul>
+              <li>
+                <p class="info-box__paragraph">→ Coleweight</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="info-box__paragraph">
+              Developed by
+              <a href="https://skillcode.dev" target="_blank">SkillCode</a>
+            </p>
+          </div>
+        </div>
+
+        <button class="cta glowing-btn">
+          <span class="glowing-txt"
+            >C<span class="faulty-letter">O</span>NVERT</span
+          >
+        </button>
+      </div>
+      <div class="notification"></div>
+    </main>
+  </body>
+</html>

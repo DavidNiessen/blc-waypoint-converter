@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+  color: white;
+  font-weight: bold;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  min-width: 250px;
+}
+
+.background-wrapper {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/img/background.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  transform: scale(1.1);
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    109.6deg,
+    rgba(0, 0, 0, 0.93) 11.2%,
+    rgb(27, 26, 26) 78.9%
+  );
+  opacity: 0.5;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.info-box {
+  color: white;
+  background-color: rgba(245, 87, 87, 0.2);
+  border: 1px solid rgba(246, 73, 73, 0.5);
+  border-radius: 10px;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.info-box__sub {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 1.5rem;
+}
+
+.info-box__paragraph {
+  display: inline;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.cta {
+  padding: 3rem 8rem;
+  font-size: 4rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1500px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 20%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 15%;
+  }
+}
